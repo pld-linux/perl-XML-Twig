@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	XML
-%define	pnam	Twig
+%define		pdir	XML
+%define		pnam	Twig
 Summary:	XML::Twig - a perl module for processing huge XML documents in tree mode
 Summary(pl):	XML::Trig - przetwarzanie du¿ych dokumentów XML w trybie drzewa
 Name:		perl-XML-Twig
