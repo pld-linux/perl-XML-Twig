@@ -40,7 +40,7 @@ na wyj¶cie czê¶ci, które zosta³y ju¿ ca³kowicie przetworzone.
 
 %build
 %{__perl} Makefile.PL </dev/null\
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 %{?_with_tests:%{__make} test}
 
