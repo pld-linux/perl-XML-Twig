@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+# _with_tests - perform "make test"
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	XML
 %define	pnam	Twig
@@ -15,7 +15,7 @@ Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%
 URL:		http://www.xmltwig.com/
 BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 3.0.3-26
-%if %{?_without_tests:0}%{!?_without_tests:1}
+%if %{?_with_tests:1}%{!?_with_tests:0}
 BuildRequires:	perl-XML-Parser
 %endif
 BuildArch:	noarch
@@ -41,7 +41,7 @@ na wyj¶cie czê¶ci, które zosta³y ju¿ ca³kowicie przetworzone.
 %build
 perl Makefile.PL
 %{__make}
-%{!?_without_tests:%{__make} test}
+%{?_with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
