@@ -8,12 +8,12 @@
 Summary:	XML::Twig - A perl module for processing huge XML documents in tree mode
 Summary(pl):	XML::Trig - przetwarzanie du¿ych dokumentów XML w trybie drzewa
 Name:		perl-XML-Twig
-Version:	3.09
-Release:	2
+Version:	3.10
+Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	ebf57e5800cd2c847a01e47fb03e1875
+# Source0-md5:	cdfeb6f6e777e4ef9885b45362e3673b
 URL:		http://www.xmltwig.com/
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -41,7 +41,7 @@ na wyj¶cie czê¶ci, które zosta³y ju¿ ca³kowicie przetworzone.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL \
+%{__perl} Makefile.PL </dev/null\
 	INSTALLDIRS=vendor 
 %{__make}
 %{?_with_tests:%{__make} test}
