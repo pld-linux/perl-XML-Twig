@@ -1,13 +1,14 @@
 #
 # Conditional build:
 # _with_tests - perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	XML
 %define	pnam	Twig
 Summary:	XML::Twig - A perl module for processing huge XML documents in tree mode
-Summary(pl):	Modu³ Perla XML::Trig - do przetwarzania du¿ych dokumentów XML w trybie drzewa
+Summary(pl):	XML::Trig - przetwarzanie du¿ych dokumentów XML w trybie drzewa
 Name:		perl-XML-Twig
-Version:	3.05
+Version:	3.08
 Release:	2
 License:	Artistic
 Group:		Development/Languages/Perl
