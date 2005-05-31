@@ -15,9 +15,9 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	70be541c68247b1394138eb2e1dc109a
 URL:		http://www.xmltwig.com/
+BuildRequires:	perl-XML-Parser
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-XML-Parser
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -57,8 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/xml_*
-%{perl_vendorlib}/%{pdir}/*.pm
-%dir %{perl_vendorlib}/%{pdir}/%{pnam}
-%{perl_vendorlib}/%{pdir}/%{pnam}/*.pm
+%{perl_vendorlib}/XML/*.pm
+%dir %{perl_vendorlib}/XML/Twig
+%{perl_vendorlib}/XML/Twig/*.pm
 %{_mandir}/man3/*
 %{_mandir}/man1/*
