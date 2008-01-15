@@ -16,6 +16,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	b776ab7e0649dd62a50bac41366046e1
 URL:		http://www.xmltwig.com/
 %if %{with tests}
+BuildRequires:	perl-Test-Pod
 BuildRequires:	perl-Text-Iconv
 BuildRequires:	perl-Tie-IxHash
 BuildRequires:	perl-Unicode-Map8
@@ -23,6 +24,7 @@ BuildRequires:	perl-Unicode-String
 BuildRequires:	perl-XML-Handler-YAWriter
 BuildRequires:	perl-XML-Parser >= 2.23
 BuildRequires:	perl-XML-SAX-Writer >= 0.39
+BuildRequires:	perl-XML-XPath
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
