@@ -12,9 +12,9 @@ Version:	3.39
 Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	c3f42ee3f09fe7b0601172ddb15bfe53
-URL:		http://www.xmltwig.com/
+URL:		http://search.cpan.org/dist/XML-Twig/
 %if %{with tests}
 BuildRequires:	perl-Test-Pod
 BuildRequires:	perl-Text-Iconv
@@ -71,8 +71,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/xml_*
-%{perl_vendorlib}/XML/*.pm
+%{perl_vendorlib}/XML/Twig.pm
 %dir %{perl_vendorlib}/XML/Twig
 %{perl_vendorlib}/XML/Twig/*.pm
-%{_mandir}/man3/*
-%{_mandir}/man1/*
+%{_mandir}/man1/xml_*.1p*
+%{_mandir}/man3/XML::Twig*.3pm*
