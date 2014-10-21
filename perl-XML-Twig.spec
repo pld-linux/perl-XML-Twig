@@ -8,12 +8,12 @@
 Summary:	XML::Twig - a perl module for processing huge XML documents in tree mode
 Summary(pl.UTF-8):	XML::Twig - przetwarzanie dużych dokumentów XML w trybie drzewa
 Name:		perl-XML-Twig
-Version:	3.39
+Version:	3.48
 Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	c3f42ee3f09fe7b0601172ddb15bfe53
+# Source0-md5:	1ddcbe84efd3ee2509d72e69fa354b75
 URL:		http://search.cpan.org/dist/XML-Twig/
 %if %{with tests}
 BuildRequires:	perl-Test-Pod
@@ -32,7 +32,7 @@ Requires:	perl-XML-Parser >= 2.23
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq	perl(XML::Twig::Elt)
+%define		_noautoreq_perl	XML::Twig::Elt
 
 %description
 This module provides a way to process XML documents. It is build on
