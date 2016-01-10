@@ -8,23 +8,29 @@
 Summary:	XML::Twig - a perl module for processing huge XML documents in tree mode
 Summary(pl.UTF-8):	XML::Twig - przetwarzanie dużych dokumentów XML w trybie drzewa
 Name:		perl-XML-Twig
-Version:	3.48
+Version:	3.49
 Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	1ddcbe84efd3ee2509d72e69fa354b75
+# Source0-md5:	afb5786e15cfe7823add6756382e7df7
 URL:		http://search.cpan.org/dist/XML-Twig/
 %if %{with tests}
-BuildRequires:	perl-Test-Pod
-BuildRequires:	perl-Text-Iconv
-BuildRequires:	perl-Tie-IxHash
+BuildRequires:	perl-Encode >= 2.42_01
+BuildRequires:	perl-IO-CaptureOutput >= 1.1102
+BuildRequires:	perl-IO-stringy >= 2.110
+BuildRequires:	perl-Scalar-List-Utils >= 1.23
+BuildRequires:	perl-Test >= 1.25_02
+BuildRequires:	perl-Test-Pod >= 1.45
+BuildRequires:	perl-Tie-IxHash >= 1.22
 BuildRequires:	perl-Unicode-Map8
 BuildRequires:	perl-Unicode-String
-BuildRequires:	perl-XML-Handler-YAWriter
+BuildRequires:	perl-XML-Filter-BufferText >= 1.01
+BuildRequires:	perl-XML-Handler-YAWriter >= 0.23
 BuildRequires:	perl-XML-Parser >= 2.23
-BuildRequires:	perl-XML-SAX-Writer >= 0.39
-BuildRequires:	perl-XML-XPath
+BuildRequires:	perl-XML-SAX-Writer >= 0.53
+BuildRequires:	perl-XML-Simple >= 2.18
+BuildRequires:	perl-XML-XPathEngine
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -53,7 +59,7 @@ przetworzone.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL </dev/null\
+%{__perl} Makefile.PL -y \
 	INSTALLDIRS=vendor
 %{__make}
 
