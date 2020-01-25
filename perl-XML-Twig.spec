@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	XML
 %define		pnam	Twig
 Summary:	XML::Twig - a perl module for processing huge XML documents in tree mode
