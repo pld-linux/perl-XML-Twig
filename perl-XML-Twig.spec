@@ -13,7 +13,7 @@ License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	14fbaf5ea8729b797ada51a880b6720e
-URL:		http://search.cpan.org/dist/XML-Twig/
+URL:		https://metacpan.org/dist/XML-Twig
 %if %{with tests}
 BuildRequires:	perl-Encode >= 2.42_01
 BuildRequires:	perl-IO-CaptureOutput >= 1.1102
@@ -33,6 +33,7 @@ BuildRequires:	perl-XML-XPathEngine
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	perl-XML-Parser >= 2.23
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
