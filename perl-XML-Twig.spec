@@ -7,12 +7,12 @@
 Summary:	XML::Twig - a perl module for processing huge XML documents in tree mode
 Summary(pl.UTF-8):	XML::Twig - przetwarzanie dużych dokumentów XML w trybie drzewa
 Name:		perl-XML-Twig
-Version:	3.54
+Version:	3.55
 Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
-Source0:	https://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	02f83a3e78644d9d0c3378422b6394d9
+Source0:	https://www.cpan.org/modules/by-module/XML/MIROD/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	21b5249c47bab2345d78e8010d1f14d5
 URL:		https://metacpan.org/dist/XML-Twig
 BuildRequires:	perl-ExtUtils-MakeMaker
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -72,6 +72,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+# author script that rewrites Twig.pm in place
+rm $RPM_BUILD_ROOT%{perl_vendorlib}/XML/speedup.pl
 
 %clean
 rm -rf $RPM_BUILD_ROOT
